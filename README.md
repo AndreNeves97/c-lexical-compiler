@@ -1,6 +1,8 @@
 # C lexical analyzer compiler
 
-Analisador léxico básico da linguagem `C Ansi`, desenvolvido em Python.
+Analisador léxico básico da linguagem `ANSI-C`, desenvolvido em Python.
+
+O analisador léxico tem a função de interpretar o código de um programa, e transformar a string em um vetor de tokens (objetos da linguagem).
 
 ## Bibliotecas utilizadas:
 
@@ -17,12 +19,12 @@ Analisador léxico básico da linguagem `C Ansi`, desenvolvido em Python.
 python3 main.py
 ```
 
-Os códigos de teste utilizados então em `./entry`. O ponto de entrada `main.py` é responsável pela leitura do arquivo `main.c`, e processamento do conteúdo.
+Os códigos de teste utilizados então em `./entry`. O ponto de entrada `main.py` é responsável pela leitura do arquivo `main.c`, seguido do processamento do conteúdo.
 
 
 ## Demonstração
 
-O seguinte código foi utilizado para teste base:
+O seguinte código foi utilizado para o teste base:
 
 
 ```c
@@ -156,3 +158,123 @@ Legend:
 
 
 Esse caso de teste não possui um código com erros. Os arquivos `entry/main2.c` e `entry/main3.c` possuem exemplos com erros de alfabeto inválido e token inválido.
+
+
+
+### Código com erro
+
+```c
+#include <stdlib.h>
+
+// Invalid characters: á é ó
+
+int main(int arg1, a 1) {char a = 'a';
+
+    char c; /* testem
+    teste
+    
+
+    comment */
+    int n = e++; 
+    int o*=4;
+    int *s = &q+1;
+    
+    int g = 2;
+    /**
+      comeent
+    */
+
+    int ___teste;
+    char str_teste[] = "André Neves -- á ó";
+    char str_teste2[] = "André \"Neves\"";
+    char h = '\'';
+
+
+
+    int lowercase_vowel, uppercase_vowel;
+    printf("Enter an alphabet: ");
+    
+    lowercase_vowel = (c == 'a' || c == 'e' /* afsaa */ || c == 'i' || c == 'o' || c == 'u');
+
+    uppercase_vowel = (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U');
+
+    // Octal number
+    int a = 0107;
+    printf("aaa %i", a);
+
+    return 0;
+}
+
+int main1(){
+  printf("Hello World");
+
+  int andre = 599;
+  int andre_19_teste = 599;
+  int b = 5;
+  int c = andre + b;
+
+  if(andre > 2 || andre <= 0) {
+    printf("teste concluido");
+    printf("12313 'asf' teste");
+    printf("9 99");
+  }
+
+  return 0;
+}
+
+/* a
+ faafas
+fasd */ int a= 2;
+
+int method(int a, int b, int c) {
+
+}
+
+/*
+comentário
+
+*/
+
+int b = 2;
+//a
+af
+
+int a = n % 2;
+int octal = 01237;
+float real = .12;
+
+
+int binary = 0b01;
+int hexa = 0xFF;
+
+if(!hexa) {
+  return 0;
+}
+
+int A123_a_29Afateste;
+123
+
+
+a += 1
+a++
+
+"STRING"
+'ctes'
+```
+
+
+Saída obtida:
+
+```
+Error on line 23 (col 24): The "é" char doesn't included in the valid alphabet
+
+Error on line 23 (col 24): The "á" char doesn't included in the valid alphabet
+
+Error on line 23 (col 24): The "ó" char doesn't included in the valid alphabet
+
+Error on line 24 (col 25): The "é" char doesn't included in the valid alphabet
+
+Error on line 97 (col 1): Unexpected token '
+
+Error on line 97 (col 6): Unexpected token '
+```
