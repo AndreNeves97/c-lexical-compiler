@@ -20,10 +20,10 @@ if len(lexer.errors) > 0:
   
   for error in lexer.errors:
     if error['type'] == 'CHAR_OF_INVALID_ALPHABET':  
-      print('Error on line %3d (col %3d): The "%c" char doesn\'t included in the valid alphabet' % (error['lin'], error['col'], error['data']))
+      print('Error on line %d (col %d): The "%c" char doesn\'t included in the valid alphabet' % (error['lin'], error['col'], error['data']))
 
     if error['type'] == 'MISMATCH_TOKEN':  
-      print('Error on line %3d (col %3d): Unexpected token %s' % (error['lin'], error['col'], error['data']))
+      print('Error on line %d (col %d): Unexpected token %s' % (error['lin'], error['col'], error['data']))
   
   exit()
 

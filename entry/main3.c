@@ -1,17 +1,10 @@
+
 #include <stdlib.h>
 
+// Invalid characters: á é ó
 
-
-    // "INT" não é identificador, é keyword 
-    // á  f f ó
-
-    /** 
-    
-    afsafsa fsaf safsa
-    */
 int main(int arg1, a 1) {char a = 'a';
 
-    // "INT" não é identificador, é keyword
     char c; /* testem
     teste
     
@@ -27,7 +20,7 @@ int main(int arg1, a 1) {char a = 'a';
     */
 
     int ___teste;
-    char str_teste[] = "André Neves á  ggggg ó";
+    char str_teste[] = "André Neves -- á ó";
     char str_teste2[] = "André \"Neves\"";
     char h = '\'';
 
@@ -47,8 +40,6 @@ int main(int arg1, a 1) {char a = 'a';
     return 0;
 }
 
-
-// "INT" não é identificador, é keyword
 int main1(){
   printf("Hello World");
 
